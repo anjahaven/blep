@@ -6,7 +6,7 @@ on:
 jobs: 
     preproduction: 
         runs-on: ubuntu-latest
-        env:
+        environment:
             name: preproduction
         steps:
             - name: 'Deploy to preprod'
@@ -15,7 +15,7 @@ jobs:
             
     preview:
         runs-on: ubuntu-latest
-        env:
+        environment:
             name: preview
         steps:
             - name: 'Deploy to another env'

@@ -1,0 +1,23 @@
+name: 'Test Env'
+on: 
+    - workflow_dispatch
+    - push
+
+jobs: 
+    preproduction: 
+        runs-on: ubuntu-latest
+        env:
+            name: preproduction
+        steps:
+            - name: 'Deploy to preprod'
+              run: |
+                echo 'Deploying!!!!!!!'
+            
+    preview:
+        runs-on: ubuntu-latest
+        env:
+            name: preview
+        steps:
+            - name: 'Deploy to another env'
+              run: |
+                echo 'Deploying with rules!!!!!!!'
